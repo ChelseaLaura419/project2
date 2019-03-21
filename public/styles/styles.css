@@ -1,3 +1,46 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+.form-signin {
+  color: #fff;
+  background-color: #212529;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center!important;
+}
+
+body {
+  background-image: url(../images/character.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
