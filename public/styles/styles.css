@@ -16,7 +16,7 @@
   text-align: center!important;
 }
 
-body {
+.home {
   background-image: url(../images/character.png);
   background-repeat: no-repeat;
   background-size: 100%;
