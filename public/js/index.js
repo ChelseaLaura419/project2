@@ -1,39 +1,39 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $firstName = $("#inputFirstName");
+var $lastName = $("#inputLastName");
+var $email = $("#inputEmail");
+var $password = $("#inputPassword");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  savecombat: function(combat) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/examples",
-      data: JSON.stringify(example)
+      data: JSON.stringify(combat)
     });
   },
-  getExamples: function() {
-    return $.ajax({
-      url: "api/examples",
-      type: "GET"
-    });
-  },
-  deleteExample: function(id) {
-    return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
-    });
-  }
+  // getExamples: function() {
+  //   return $.ajax({
+  //     url: "api/examples",
+  //     type: "GET"
+  //   });
+  // },
+  // deleteExample: function(id) {
+  //   return $.ajax({
+  //     url: "api/examples/" + id,
+  //     type: "DELETE"
+  //   });
+  // }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+// refreshcombat gets new examples from the db and repopulates the list
+var refreshcombat = function() {
+  API.getcombat().then(function(data) {
+    var $ = data.map(function(example) {
       var $a = $("<a>")
         .text(example.text)
         .attr("href", "/example/" + example.id);
@@ -59,41 +59,41 @@ var refreshExamples = function() {
   });
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
-  event.preventDefault();
+// // handleFormSubmit is called whenever we submit a new example
+// // Save the new example to the db and refresh the list
+// var handleFormSubmit = function(event) {
+//   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
-  };
+//   var example = {
+//     text: $exampleText.val().trim(),
+//     description: $exampleDescription.val().trim()
+//   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }
+//   if (!(example.text && example.description)) {
+//     alert("You must enter an example text and description!");
+//     return;
+//   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
-  });
+//   API.saveExample(example).then(function() {
+//     refreshExamples();
+//   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
-};
+//   $exampleText.val("");
+//   $exampleDescription.val("");
+// };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
+// // handleDeleteBtnClick is called when an example's delete button is clicked
+// // Remove the example from the db and refresh the list
+// var handleDeleteBtnClick = function() {
+//   var idToDelete = $(this)
+//     .parent()
+//     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
-};
+//   API.deleteExample(idToDelete).then(function() {
+//     refreshExamples();
+//   });
+// };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$submitBtn.on("click", submit);
+// $exampleList.on("click", ".delete", handleDeleteBtnClick);
