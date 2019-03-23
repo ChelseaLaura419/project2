@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.post("/api/new", function(req, res) {
 
     console.log(req.body);
-
+  
     newCharacter.create({
         name: req.body.name,
         class: req.body.class,
