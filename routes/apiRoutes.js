@@ -1,42 +1,24 @@
-var newCharacter = require("../models/character.js");
-
-
+var db = require("../models");
 
 module.exports = function(app) {
-
-  app.get("/api/all", function(req, res) {
-
-    newCharacter.findAll({}).then(function(results) {
-      res.json(results);
+  // Get all examples
+  app.get("/api/", function(req, res) {
+    db.combat.findAll({}).then(function(dbcombat) {
+      res.json(dbcombat);
     });
-
   });
-
-  app.post("/api/new", function(req, res) {
-
-    console.log(req.body);
-  
-    newCharacter.create({
-        name: req.body.name,
-        class: req.body.class,
-        age: req.body.age,
-        class: req.body.class,
-        height: req.body.height,
-        strength: req.body.strength,
-        weakness: req.body.weakness,
-        description: req.body.description,
-        photo: req.body.photo
-    }).then(function(results) {
-      res.end();
-    });
-
-  });
-
 };
-//   // Delete an example by id
-//   app.delete("/api/examples/:id", function(req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
+
+  // Create a new example
+  // app.post("/api/combat", function(req, res) {
+  //   db.combat.create(req.body).then(function(dbcombat) {
+  //     res.json(dbcombat);
+  //   });
+  // });
+
+  // Delete an example by id
+  // app.delete("/api/examples/:id", function(req, res) {
+  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.json(dbExample);
+  //   });
 //   });
-// };
