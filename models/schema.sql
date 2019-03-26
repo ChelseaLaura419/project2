@@ -12,7 +12,7 @@ CREATE TABLE information (
 
     email VARCHAR(50) NOT NULL,
 
-    password VARCHAR(20) NOT NULL,
+    password VARCHAR(20) NOT NULL
 );
 
 -- CREATE TABLE people (

@@ -1,0 +1,168 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Combat Squad</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+
+<body>
+
+  <!-- NAVBAR START -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.html"><img src="images/combatSmall.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Marvel Mania</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Whoniverse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Land of Ooo</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="character.html">Create A Character</a>
+        </li>
+        <li class="nav-item mr-sm-2">
+          <a class="nav-link my-2 my-sm-0" href="#">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HEADER LOGO -->
+  <div class="text-center" data-gr-c-s-loaded="true">
+    <img src="images/marvelHeader.png" width="100%">
+  </div>
+  <main>
+    <br>
+
+    <form id="quiz" name="quiz">
+      <div>
+        <div class="row">
+          <div class="col-sm-6">
+
+            <img class="bd-placeholder-img" width="350" height="280" src="images/drStrange.png"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+          </div>
+          <div class="col-sm-6">
+            <br> <br>
+
+            <h3>What color is Thanos?</h3>
+            <ul>
+              <input type="radio" id="mc" value="blue" name="question1" />Blue</ul>
+            <ul>
+              <input type="radio" id="mc" value="Purple" name="question1" />Purple</ul>
+            <ul>
+              <input type="radio" id="mc" value="red" name="question1" />Red</ul>
+            <ul>
+              <input type="radio" id="mc" value="green" name="question1" />Green</ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div>
+        <div class="row">
+          <div class="col-sm-6">
+
+            <img class="bd-placeholder-img" width="350" height="280" src="images/thanos.png"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+          </div>
+          <div class="col-sm-6">
+            <br> <br>
+            <h3>Who is Starloards favorite actor? </h3>
+            <ul>
+              <input type="radio" id="mc" value="Brian Cranston" name="question2" />Brian Cranston</ul>
+            <ul>
+              <input type="radio" id="mc" value="Samual L. Jackson" name="question2" />Samual L. Jackson</ul>
+            <ul>
+              <input type="radio" id="mc" value="Kevin Bacon" name="question2" />Kevin Bacon</ul>
+            <ul>
+              <input type="radio" id="mc" value="Chris Pratt" name="question2" />Chris Pratt</ul>
+          </div>
+
+        </div>
+        <br>
+        <div>
+          <div class="row">
+            <div class="col-sm-6">
+
+              <img class="bd-placeholder-img" width="350" height="280" src="images/gamora.png"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+            </div>
+            <div class="col-sm-6">
+              <br> <br>
+              <h3>Where is SpiderMan from? </h3>
+              <ul>
+                <input type="radio" id="mc" value="Queens" name="question3" /> Queens</ul>
+              <ul>
+                <input type="radio" id="mc" value="Orlando" name="question3" />Orlando</ul>
+              <ul>
+                <input type="radio" id="mc" value="Brooklyn" name="question3" />Brooklyn</ul>
+              <ul>
+                <input type="radio" id="mc" value="Portland" name="question3" />Portland</ul>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div>
+          <div class="row">
+            <div class="col-sm-6">
+
+              <img class="bd-placeholder-img" width="350" height="280" src="images/hela.png"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+            </div>
+            <div class="col-sm-6">
+              <br>
+              <h3>How many kids does HawkEye have? </h3>
+              <ul>
+                <input type="radio" id="mc" value="Five" name="question4" /> Five</ul>
+              <ul>
+                <input type="radio" id="mc" value="Twelve" name="question4" />Twelve</ul>
+              <ul>
+                <input type="radio" id="mc" value="Three" name="question4" />Three</ul>
+              <ul>
+                <input type="radio" id="mc" value="Two" name="question4" />Two</ul>
+            </div>
+          </div>
+        </div>
+        <br>
+    </form>
+    <input id="button" type="button" value="Submit my answers" onclick="check();"></input>
+    <input id="button" type="button" value="Reset Quiz" onclick="reset();"></input>
+
+    <p id="number_correct"></p>
+
+    <br>
+    <br>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/questions.js"></script>
+  </main>
+
+</body>
+
+</html>
