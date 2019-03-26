@@ -64,29 +64,29 @@
               </div>
     <div class="col p-4 d-flex flex-column position-static">
       <h3 class="mb-0">Challenge 1</h3>
-      <p class="card-text mb-auto">The more you take, the more you leave behind. What am I?</p>
+      <p class="card-text mb-auto">what color is Thanos?</p>
       <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <input class="form-check-input" type="radio" name="questionOne" id="exampleRadios1" value="purple" checked>
             <label class="form-check-label" for="exampleRadios1">
-                Default radio
+                Purple
             </label>
           </div>
           <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <input class="form-check-input" type="radio" name="questionOne" id="exampleRadios1" value="blue" checked>
                 <label class="form-check-label" for="exampleRadios1">
-                  Footsteps
+                  blue
                 </label>
               </div>
               <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="questionOne" id="exampleRadios1" value="green" checked>
                     <label class="form-check-label" for="exampleRadios1">
-                      Default radio
+                      green
                     </label>
                   </div>
                   <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="questionOne" id="exampleRadios1" value="red" checked>
                         <label class="form-check-label" for="exampleRadios1">
-                          Default radio
+                          red
                         </label>
                       </div>
     </div>
@@ -232,12 +232,15 @@
     </div>
   </div>
   <br><br>
-
+  <input id="button" type="button" value="Submit my answers" onclick="check();"></input>
+  <div id="after_submit">
+    <p id="number_correct"></p>
+  </div>
   
 </div>
+<br>
 
-
-
+<script type="text/javascript" src="js/questions.js"></script>
 </body>
 
 </html>
