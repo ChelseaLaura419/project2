@@ -1,8 +1,14 @@
-// Get references to page elements
-var $firstName = $("#inputFirstName");
-var $lastName = $("#inputLastName");
-var $email = $("#inputEmail");
-var $password = $("#inputPassword");
+// // Get references to page elements
+$("#submit").on("click", function(event){
+  event.preventDefault();
+  alert("clicked!");
+  window.location.href = ("/characters");
+
+
+})
+// var $lastName = $("#inputLastName");
+// var $email = $("#inputEmail");
+// var $password = $("#inputPassword");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -59,41 +65,41 @@ var refreshcombat = function() {
   });
 };
 
-// // handleFormSubmit is called whenever we submit a new example
-// // Save the new example to the db and refresh the list
-// var handleFormSubmit = function(event) {
-//   event.preventDefault();
+// // // handleFormSubmit is called whenever we submit a new example
+// // // Save the new example to the db and refresh the list
+var handleFormSubmit = function(event) {
+  event.preventDefault();
 
-//   var example = {
-//     text: $exampleText.val().trim(),
-//     description: $exampleDescription.val().trim()
-//   };
+  var example = {
+    text: $exampleText.val().trim(),
+    description: $exampleDescription.val().trim()
+  };
 
-//   if (!(example.text && example.description)) {
-//     alert("You must enter an example text and description!");
-//     return;
-//   }
+  if (!(example.text && example.description)) {
+    alert("You must enter an example text and description!");
+    return;
+  }
 
-//   API.saveExample(example).then(function() {
-//     refreshExamples();
-//   });
+  API.saveExample(example).then(function() {
+    refreshExamples();
+  });
 
-//   $exampleText.val("");
-//   $exampleDescription.val("");
-// };
+  $exampleText.val("");
+  $exampleDescription.val("");
+};
 
-// // handleDeleteBtnClick is called when an example's delete button is clicked
-// // Remove the example from the db and refresh the list
-// var handleDeleteBtnClick = function() {
-//   var idToDelete = $(this)
-//     .parent()
-//     .attr("data-id");
+handleDeleteBtnClick is called when an example's delete button is clicked
+Remove the example from the db and refresh the list
+var handleDeleteBtnClick = function() {
+  var idToDelete = $(this)
+    .parent()
+    .attr("data-id");
 
-//   API.deleteExample(idToDelete).then(function() {
-//     refreshExamples();
-//   });
-// };
+  API.deleteExample(idToDelete).then(function() {
+    refreshExamples();
+  });
+};
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", submit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+$exampleList.on("click", ".delete", handleDeleteBtnClick);
