@@ -24,6 +24,7 @@ function checkMarvel() {
   if (question4 === "Two") {
     correct++;
   }
+
   if (question5 === "One") {
     correct++;
   }

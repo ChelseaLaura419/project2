@@ -4,15 +4,11 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-
-      res.render("index");
-
-    db.combat.findAll({}).then(function(data) {
+    db.information.findAll({}).then(function(data) {
       res.render("index", {
         data
       });
     });
-
   });
 
   // Load example page and pass in an example by id
@@ -60,8 +56,6 @@ module.exports = function(app) {
   });
 };
 
-
-
   // Load example page and pass in an example by i
 
   app.get("/character", function(req, res) {
@@ -90,5 +84,3 @@ module.exports = function(app) {
     res.render("404");
   });
 };
-
-
