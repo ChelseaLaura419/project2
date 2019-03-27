@@ -12,7 +12,8 @@ module.exports = function(app) {
 
   app.post("/api/user", function(req, res) {
     db.information.create(req.body).then(function(data) {
-      res.json(data);
+      res.redirect("/character");
+      
     });
   });
 };

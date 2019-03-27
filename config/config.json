@@ -2,9 +2,13 @@
   "development": {
     "username": "root",
 
+    "password": "Cadiz3052!!",
+
+
     "password": null,
 
     "password": "tH!Nk875",
+
 
     "database": "combat_db",
     "host": "127.0.0.1",
@@ -13,9 +17,13 @@
   "test": {
     "username": "root",
 
+    "password": "Cadiz3052!!",
+
+
     "password": null,
 
     "password": "tH!Nk875",
+
 
     "database": "combat_db",
     "host": "127.0.0.1",
