@@ -10,6 +10,7 @@ function checkMarvel() {
   var question2 = document.quiz.question2.value;
   var question3 = document.quiz.question3.value;
   var question4 = document.quiz.question4.value;
+  var question4 = document.quiz.question5.value;
   var correct = 0;
   if (question1 === "Purple") {
     correct++;
@@ -21,6 +22,10 @@ function checkMarvel() {
     correct++;
   }
   if (question4 === "Two") {
+    correct++;
+  }
+
+  if (question5 === "One") {
     correct++;
   }
   document.getElementById("number_correct").innerHTML = "The Nova Corps thanks you for your effort! You got " + correct + " correct.";
