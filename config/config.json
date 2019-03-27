@@ -1,16 +1,24 @@
 {
   "development": {
     "username": "root",
+
     "password": null,
+
+    "password": "tH!Nk875",
+
     "database": "combat_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+
     "password": null,
+
+    "password": "tH!Nk875",
+
     "database": "combat_db",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "logging": false
   },
