@@ -1,11 +1,11 @@
 // // Get references to page elements
-$("#submit").on("click", function(event){
-  event.preventDefault();
-  alert("clicked!");
-  window.location.href = ("/characters");
+// $("#submit").on("click", function(event){
+//   event.preventDefault();
+//   alert("clicked!");
+//   window.location.href = ("/characters");
 
 
-})
+// })
 // var $lastName = $("#inputLastName");
 // var $email = $("#inputEmail");
 // var $password = $("#inputPassword");

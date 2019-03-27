@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "Cadiz3052!!",
     "database": "combat_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Cadiz3052!!",
     "database": "combat_db",
     "host": "localhost",
     "dialect": "mysql",
