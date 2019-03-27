@@ -1,7 +1,3 @@
-DROP DATABASE IF EXISTS combat_db;
-
-CREATE DATABASE combat_db;
-
 USE combat_db;
 
 CREATE TABLE information (
