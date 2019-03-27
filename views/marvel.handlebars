@@ -90,14 +90,33 @@
           </div>
         </div>
         <br>
-    </form>
-    <input id="button" type="button" value="Submit my answers" onclick="check();"></input>
-    <input id="button" type="button" value="Reset Quiz" onclick="reset();"></input>
+    </form> <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="checkMarvel();">
+ Submit Battle Responses
+</button>
 
-    <p id="number_correct"></p>
-
-    <br>
-    <br>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Combat Squad</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="nova" src="images/Guardians-of-the-Galaxy-Nova-Corps.jpg">
+        <p id="number_correct"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reset();">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/questions.js"></script>
