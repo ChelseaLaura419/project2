@@ -20,6 +20,7 @@
   background-image: url(../images/character.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 1rem;
@@ -58,18 +59,6 @@ label {
 .active-slide{
   opacity: 1;
   z-index: 2;
-}
-.quiz-container{
-  position: relative;
-  height: 200px;
-  margin-top: 40px;
-}
-
-
-#quiz {
-  width: 1100px;
-  height:1200px;
-  padding-left: 200px;
 }
 
 .questionBox {
