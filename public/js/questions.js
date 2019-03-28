@@ -27,7 +27,7 @@ function checkMarvel() {
   if (question5 === "Fury") {
     correct++;
   }
-  document.getElementById("number_correct").innerHTML = "The Nova Corps thanks you for your effort! You got " + correct + " correct.";
+  document.getElementById("number_correct").innerHTML = "The Nova Corps thank you for your effort! You got " + correct + " correct.";
 }
 
 // DR. WHO
@@ -38,19 +38,19 @@ function checkWho() {
   var question4 = document.quiz.question4.value;
   var question5 = document.quiz.question5.value;
   var correct = 0;
-  if (question1 === "who") {
+  if (question1 === "Rose") {
     correct++;
   }
-  if (question2 === "who") {
+  if (question2 === "Newspaper Seller") {
     correct++;
   }
-  if (question3 === "who") {
+  if (question3 === "Time and relative dimensions in space") {
     correct++;
   }
-  if (question4 === "who") {
+  if (question4 === "Die") {
     correct++;
   }
-  if (question5 === "adventure") {
+  if (question5 === "The Chameleon Circuit") {
     correct++;
   }
   document.getElementById("number_correct").innerHTML = "Dr. Who will find you! You got " + correct + " correct.";
@@ -64,19 +64,19 @@ function checkAdventure() {
   var question4 = document.quiz.question4.value;
   var question5 = document.quiz.question5.value;
   var correct = 0;
-  if (question1 === "adventure") {
+  if (question1 === "Dog") {
     correct++;
   }
-  if (question2 === "adventure") {
+  if (question2 === "Ash") {
     correct++;
   }
-  if (question3 === "adventure") {
+  if (question3 === "Stretching") {
     correct++;
   }
-  if (question4 === "adventure") {
+  if (question4 === "Am I Joke, your knight or your brother?") {
     correct++;
   }
-  if (question5 === "adventure") {
+  if (question5 === "Base Axe") {
     correct++;
   }
   document.getElementById("number_correct").innerHTML = "The adventure isn't over yet! You got " + correct + " correct.";
