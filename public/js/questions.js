@@ -10,22 +10,21 @@ function checkMarvel() {
   var question2 = document.quiz.question2.value;
   var question3 = document.quiz.question3.value;
   var question4 = document.quiz.question4.value;
-  var question4 = document.quiz.question5.value;
+  var question5 = document.quiz.question5.value;
   var correct = 0;
-  if (question1 === "Purple") {
+  if (question1 === "Star-Prince") {
     correct++;
   }
-  if (question2 === "Kevin Bacon") {
+  if (question2 === "Johann Schmidt") {
     correct++;
   }
-  if (question3 === "Queens") {
+  if (question3 === "Ex-Wife") {
     correct++;
   }
-  if (question4 === "Two") {
+  if (question4 === "Kree") {
     correct++;
   }
-
-  if (question5 === "One") {
+  if (question5 === "Fury") {
     correct++;
   }
   document.getElementById("number_correct").innerHTML = "The Nova Corps thanks you for your effort! You got " + correct + " correct.";
@@ -37,6 +36,7 @@ function checkWho() {
   var question2 = document.quiz.question2.value;
   var question3 = document.quiz.question3.value;
   var question4 = document.quiz.question4.value;
+  var question5 = document.quiz.question5.value;
   var correct = 0;
   if (question1 === "who") {
     correct++;
@@ -50,6 +50,9 @@ function checkWho() {
   if (question4 === "who") {
     correct++;
   }
+  if (question5 === "adventure") {
+    correct++;
+  }
   document.getElementById("number_correct").innerHTML = "Dr. Who will find you! You got " + correct + " correct.";
 }
 
@@ -59,6 +62,7 @@ function checkAdventure() {
   var question2 = document.quiz.question2.value;
   var question3 = document.quiz.question3.value;
   var question4 = document.quiz.question4.value;
+  var question5 = document.quiz.question5.value;
   var correct = 0;
   if (question1 === "adventure") {
     correct++;
@@ -70,6 +74,9 @@ function checkAdventure() {
     correct++;
   }
   if (question4 === "adventure") {
+    correct++;
+  }
+  if (question5 === "adventure") {
     correct++;
   }
   document.getElementById("number_correct").innerHTML = "The adventure isn't over yet! You got " + correct + " correct.";
