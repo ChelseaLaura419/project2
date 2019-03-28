@@ -4,83 +4,38 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.information.findAll({}).then(function(data) {
-      res.render("index", {
-        data
-      });
-    });
+      res.render("index");
   });
 
   // Load example page and pass in an example by id
   app.get("/squad", function(req, res) {
-      res.render("squad", {
-        msg: "Welcome"
-      });
+      res.render("squad");
   });
 
   app.get("/boards", function(req, res) {
-      res.render("boards", {
-        msg: "Welcome"
-      });
+      res.render("boards");
   });
 
 
   app.get("/character", function(req, res) {
-      res.render("character", {
-        msg: "Welcome"
-      });
+      res.render("character");
     });
 
   app.get("/marvel", function(req, res) {
-      res.render("marvel", {
-        msg: "Welcome"
-      });
+      res.render("marvel");
     });
 
   app.get("/whoniverse", function(req, res) {
-      res.render("whoniverse", {
-        msg: "Welcome"
-      });
+      res.render("whoniverse");
     });
 
   app.get("/adventure", function(req, res) {
-      res.render("adventure", {
-        msg: "Welcome"
-      });
+      res.render("adventure");
   });
   // Render 404 page for any unmatched routes
   app.get("404", function(req, res) {
     res.render("404", {
       msg: "Welcome"
     });
-  });
-};
-
-  // Load example page and pass in an example by i
-
-  app.get("/character", function(req, res) {
-      res.render("character");
-  });
-
-  app.get("/marvel", function(req, res) {
-    db.combat.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("marvel");
-    });
-  });
-
-  app.get("/whoniverse", function(req, res) {
-    db.combat.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("whoniverse");
-    });
-  });
-
-  app.get("/adventure", function(req, res) {
-    db.combat.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("adventure");
-    });
-  });
-  // Render 404 page for any unmatched routes
-  app.get("404", function(req, res) {
-    res.render("404");
   });
 };

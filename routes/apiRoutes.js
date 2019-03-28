@@ -11,15 +11,39 @@ module.exports = function(app) {
 
 
   app.post("/api/user", function(req, res) {
-    db.information.create(req.body).then(function(data) {
+    db.information.create({
+      firstName: req.inputFirstName,
+      lastName: req.inputLastName,
+      email: req.inputEmail,
+      password: req.inputPassword,
+    }).then(function(data) {
       res.redirect("/character");
+      res.json(data);
       
     });
   });
+
+  app.get("/api/team", function (req, res) {
+    db.characters.findAll({}).then(function (players) {
+     res.json(players);
+   });
+ });
+
+
+  app.post("/api/character", function (req, res) {
+    db.characters.create({
+      name: req.characterName,
+      class_race: req.characterClass,
+      age: req.characterAge,
+      height: req.characterHeight,
+      strength: req.characterStrength,
+      weakness: req.characterWeakness,
+      description: req.characterDescription,
+    }).then(function(team) {
+      res.json(team);
+      // res.redirect("/squad");
+    });
+  });
+  
 };
-  // Delete an example by id
-  // app.delete("/api/examples/:id", function(req, res) {
-  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-//   });
+
