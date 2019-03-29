@@ -16,7 +16,39 @@ module.exports = function(app) {
       
     });
   });
+
+  app.post("/api/character", function (req, res) {
+    db.characters.create({
+      name: req.body.name,
+      class: req.body.class,
+      age: req.body.age,
+      height: req.body.height,
+      strength: req.body.strength,
+      weakness: req.body.weakness,
+      description: req.body.description,
+    }).then(function (players) {
+     res,redirect("/squad");
+   });
+ });
+
+
+  app.get("/api/team", function (req, res) {
+    db.characters.findAll(req.body).then(function(team) {
+      res.json(team);
+    });
+  });
+
 };
+
+
+
+
+
+
+
+
+
+
   // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
   //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {

@@ -4,11 +4,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.information.findAll({}).then(function(data) {
-      res.render("index", {
-        data
-      });
-    });
+      res.render("index");
   });
 
   // Load example page and pass in an example by id
