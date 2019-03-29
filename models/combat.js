@@ -33,7 +33,7 @@ var characters = sequelize.define("characters", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  class_race: {
+  class: {
     type: DataTypes.STRING,
     allowNull: false,
   },

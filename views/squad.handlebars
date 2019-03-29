@@ -16,16 +16,16 @@
         <div class="col-sm">
             <div class="card" style="width: 18rem;">
                 <img src="{{photo}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
+                <div class="card-body" method="GET" action="/api/team">
+                    <h5 name="name" class="card-title">{{name}}</h5>
                     <p class="card-text">{{description}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Class: {{class}}</li>
-                    <li class="list-group-item">Age: {{age}}</li>
-                    <li class="list-group-item">Height: {{height}}</li>
-                    <li class="list-group-item">Strength: {{strength}}</li>
-                    <li class="list-group-item">Weakness: {{weakness}}</li>
+                    <li name="class" class="list-group-item">Class: {{class}}</li>
+                    <li name="age" class="list-group-item">Age: {{age}}</li>
+                    <li name="height" class="list-group-item">Height: {{height}}</li>
+                    <li name="strength" class="list-group-item">Strength: {{strength}}</li>
+                    <li name="weakness" class="list-group-item">Weakness: {{weakness}}</li>
                 </ul>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <img src="{{photo}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{name}}</h5>
-                    <p class="card-text">{{description}}</p>
+                    <p name="description" class="card-text">{{description}}</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Class: {{class}}</li>

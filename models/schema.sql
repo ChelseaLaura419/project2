@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS combat_db;
+
+CREATE DATABASE combat_db;
+
 USE combat_db;
 
 CREATE TABLE information (
@@ -15,15 +19,16 @@ CREATE TABLE characters (
 
   name VARCHAR NOT NULL,
 
-  class_race VARCHAR NOT NULL,
+  class VARCHAR NOT NULL,
 
   age INTEGER(255) NOT NULL,
 
   height VARCHAR(10) NOT NULL,
 
-  strength INTEGER(200) NOT NULL,
+  strength VARCHAR(200) NOT NULL,
 
   weakness VARCHAR(40) NOT NULL,
 
   description INTEGER(255)
+
 );

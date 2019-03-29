@@ -11,37 +11,38 @@ module.exports = function(app) {
 
 
   app.post("/api/user", function(req, res) {
-    db.information.create({
-      firstName: req.inputFirstName,
-      lastName: req.inputLastName,
-      email: req.inputEmail,
-      password: req.inputPassword,
-    }).then(function(data) {
+    db.information.create(req.body).then(function(data) {
       res.redirect("/character");
-      res.json(data);
       
     });
   });
 
-  app.get("/api/team", function (req, res) {
-    db.characters.findAll({}).then(function (players) {
-     res.json(players);
+  app.post("/api/character", function (req, res) {
+    db.characters.create({
+      name: req.body.name,
+      class: req.body.class,
+      age: req.body.age,
+      height: req.body.height,
+      strength: req.body.strength,
+      weakness: req.body.weakness,
+      description: req.body.description,
+    }).then(function (players) {
+     res.redirect("/squad");
    });
  });
 
 
-  app.post("/api/character", function (req, res) {
-    db.characters.create({
-      name: req.characterName,
-      class_race: req.characterClass,
-      age: req.characterAge,
-      height: req.characterHeight,
-      strength: req.characterStrength,
-      weakness: req.characterWeakness,
-      description: req.characterDescription,
+  app.get("/api/team", function (req, res) {
+    db.characters.findAll({
+      name: req.body.name,
+      class: req.body.class,
+      age: req.body.age,
+      height: req.body.height,
+      strength: req.body.strength,
+      weakness: req.body.weakness,
+      description: req.body.description,
     }).then(function(team) {
       res.json(team);
-      // res.redirect("/squad");
     });
   });
   
