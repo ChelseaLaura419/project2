@@ -1,17 +1,23 @@
-var db = require("../models");
+var db = require("../models/");
 
 module.exports = function(app) {
   // Get all examples
   app.get("/api/", function(req, res) {
     db.information.findAll({}).then(function(data) {
-      res.json(data);
+      data;
     });
   });
 
 
 
   app.post("/api/user", function(req, res) {
-    db.information.create(req.body).then(function(data) {
+    // var info = req.body;
+    db.information.create({
+      firstName: req.body.first,
+      lastName: req.body.last,
+      email: req.body.email,
+      password: req.body.password
+    }).then(function(username) {
       res.redirect("/character");
       
     });
@@ -25,7 +31,7 @@ module.exports = function(app) {
       height: req.body.height,
       strength: req.body.strength,
       weakness: req.body.weakness,
-      description: req.body.description,
+      description: req.body.description
     }).then(function (players) {
      res,redirect("/squad");
    });
@@ -40,18 +46,3 @@ module.exports = function(app) {
 
 };
 
-
-
-
-
-
-
-
-
-
-  // Delete an example by id
-  // app.delete("/api/examples/:id", function(req, res) {
-  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-//   });

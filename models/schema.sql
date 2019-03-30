@@ -7,10 +7,11 @@ CREATE TABLE information (
     lastName VARCHAR(40) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password VARCHAR(20) NOT NULL
+
 );
 CREATE TABLE characters (
-  name VARCHAR NOT NULL,
-  class VARCHAR NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  class VARCHAR(255) NOT NULL,
   age INTEGER(255) NOT NULL,
   height VARCHAR(10) NOT NULL,
   strength VARCHAR(200) NOT NULL,
